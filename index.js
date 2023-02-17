@@ -111,3 +111,23 @@ console.log("Q7: " + helloHello("Holla", 5));
 // I created a variable in the function to hold the sum of the concatenations. I defined it with "" in order to
 // denote that it would be taking in string data. After the for loop, I put return, so the new value of sumSum would
 // be given back to us from the computer.
+
+// 8. Write a function that takes two parameters, firstName and lastName, and returns a full name. 
+// The full name should be the first and the last name separated by a space.
+
+function fullName(name1, name2) {
+    return name1 + " " + name2;
+}
+console.log("Q8: " + fullName("Natalie", "Jackson"));
+
+//9. Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
+
+// 10. Write a function that takes an array of numbers and returns the average of all the elements in the array.
+
+// 11. Write a function that takes two arrays of numbers and returns true if the average of the 
+// elements in the first array is greater than the average of the elements in the second array.
+
+// 12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket,
+//  and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
+
+// 13. Create a function of your own that solves a problem.   In comments, write what the function does and why you created it.
