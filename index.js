@@ -62,16 +62,18 @@ console.log(nameString);
 // strings, it does not put in spaces. They must be added as their own string if not included in original string.
 
 // 3. How do you access the last element of any array?
-let str1 = "Q3: The index of the last element can be found at arrayName.length -1. ";
-let str2 = "If you want to access the element, you put that value in the square brackets next to arrayName. ";
-let str3 = "Ex: arrayName[arrayName.length - 1]";
+let str1 = `Q3: The index of the last element can be found at arrayName.length -1.
+If you want to access the element, you put that value in the square brackets next to arrayName.
+Ex: arrayName[arrayName.length - 1]`;
 
-console.log(str1 + str2 + str3);
+console.log(str1);
 
 // 4. How do you access the first element of any array?
-let str4 = "Q4: The first element of an array is found at index 0. ";
-let str5 = "Ex: arrayName[0]";
-console.log(str4 + str2 + str5);
+let str4 = `Q4: The first element of an array is found at index 0.
+If you want to access the element, you put that value in the square brackets next to arrayName.
+Ex: arrayName[0]`;
+
+console.log(str4);
 
 // 5. Create a new array called nameLengths. Write a loop to iterate over the previously created names array
 // and add the length of each name to the nameLengths array.
@@ -115,17 +117,69 @@ console.log("Q7: " + helloHello("Holla", 5));
 // 8. Write a function that takes two parameters, firstName and lastName, and returns a full name. 
 // The full name should be the first and the last name separated by a space.
 
-function fullName(name1, name2) {
-    return name1 + " " + name2;
-}
-console.log("Q8: " + fullName("Natalie", "Jackson"));
+const fullName = (name1, name2) => `${name1} ${name2}`;
+
+console.log("Q8: " + (fullName("Natalie", "Jackson")));
+
+// REMEMBER TO WRITE IN YOUR EXPLANATION FOR THIS ARROW FUNCTION AND TEMPLATE LITERAL
 
 //9. Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
 
+function additionTime(array) {
+    let addSum = 0;
+    for (let i = 0; i < array.length; i++) {
+        addSum += array[i];
+    };
+    return addSum > 100;
+};
+
+let testArray = [7, 17, 25, 25, 39, 4, 7];
+
+console.log("Q9: " + (additionTime(testArray)));
+
+// I created a function with a for loop in order to add up all the numbers in the array. I then added a boolean in the function to return true if the
+// sum was greater than 100. I then created a test array in order to test out my function and to print out onto the web page.
+
 // 10. Write a function that takes an array of numbers and returns the average of all the elements in the array.
+
+function meanElements(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+    };
+    return sum / array.length;
+};
+
+console.log("Q10: " + (meanElements(testArray)));
+
+// I wrote a function similar to the one in question nine where I used a for loop to add up all the elements in an array. After the loop,
+// I then asked for the sum divided by the array length to be returned.
 
 // 11. Write a function that takes two arrays of numbers and returns true if the average of the 
 // elements in the first array is greater than the average of the elements in the second array.
+
+function compareMeanArrays (array1, array2) {
+    let sumOne = 0;
+    for (let i =0; i < array1.length; i++) {
+        sumOne += array1[i];
+    };
+    let sumTwo = 0;
+    for (let i = 0; i < array2.length; i++) {
+        sumTwo += array2[i];
+    };
+    let averageOne = sumOne / array1.length;
+    let averageTwo = sumTwo / array2.length;
+
+    return averageOne > averageTwo;
+}
+
+let testArrayTwo = [17, 16, 15, 80, 45, 3];
+
+console.log("Q11: " + (compareMeanArrays(testArray, testArrayTwo)));
+
+// I created a function using the same for loop I used in question ten. I did this for each array. I then created two new variables to represent
+// the mean of each array and created a boolean that returned true if the first array was greater than the second array. I then created a second test array
+// to test out the function.
 
 // 12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket,
 //  and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
