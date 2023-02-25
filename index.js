@@ -209,7 +209,7 @@ function startCoursework (meditationTime, bedIsMade, ptExercisesDone) {
 let bedIsMade = true;
 let ptExercisesDone = true;
 
-console.log("Q13: " + (startCoursework(23, bedIsMade, ptExercisesDone)));
+console.log("Q13: " + (startCoursework(19, bedIsMade, ptExercisesDone)));
 
 // My startCoursework function takes a number, meditationTime, and two Booleans, bedIsMade and ptExercisesDone, as its parameters. The function centers around the conditional:
 // If I have meditated for greater than or equal to 15 minutes and I have made my bed and I have finished my physical therapy exercises, then it is
