@@ -121,7 +121,8 @@ const fullName = (name1, name2) => `${name1} ${name2}`;
 
 console.log("Q8: " + (fullName("Natalie", "Jackson")));
 
-// REMEMBER TO WRITE IN YOUR EXPLANATION FOR THIS ARROW FUNCTION AND TEMPLATE LITERAL
+// Since this was a simpler function, I felt comfortable using an arrow function to help shorten the syntax. I also used template literals to put
+// in the first and last name, so there wouldn't be a need to add in a space. It seemed like the simpler, more readable option.
 
 //9. Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
 
@@ -184,4 +185,35 @@ console.log("Q11: " + (compareMeanArrays(testArray, testArrayTwo)));
 // 12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket,
 //  and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
 
+function willBuyDrink (isHotOutside, moneyInPocket) {
+    return isHotOutside && moneyInPocket > 10.50;
+};
+let isHotOutside = true;
+
+console.log("Q12: " + (willBuyDrink(isHotOutside, 15)));
+
+// I created the function with the parameters requested. I then used the "and" operator to make sure that both conditions had to be met
+// in order for it to be returned true. I then created the boolean variable and set it to true. I used console log to test it out by putting in different
+// numbers or by stating isHotOutside was false.
+
 // 13. Create a function of your own that solves a problem.   In comments, write what the function does and why you created it.
+
+function startCoursework (meditationTime, bedIsMade, ptExercisesDone) {
+    if (meditationTime >= 15 && bedIsMade && ptExercisesDone) {
+        return "Time to get to work!";
+    } else {
+        return "Go take care of yourself!";
+    }
+};
+
+let bedIsMade = true;
+let ptExercisesDone = true;
+
+console.log("Q13: " + (startCoursework(23, bedIsMade, ptExercisesDone)));
+
+// My startCoursework function takes a number, meditationTime, and two Booleans, bedIsMade and ptExercisesDone, as its parameters. The function centers around the conditional:
+// If I have meditated for greater than or equal to 15 minutes and I have made my bed and I have finished my physical therapy exercises, then it is
+// "Time to get to work!". If I haven't completed even one of these things, then I need to go back and finish.
+// I created this function because this is part of my every day. I have been tempted to go outside my routine and start my coursework before attending my
+// daily needs. This usually will result in me being distracted or hyperfocusing on coursework and burning out. So I make sure that I make my bed, do my PT exercises,
+// and meditate for at least 15 minutes before hopping on the computer. I find it prevents burnout and I am more focused. So my function is based on that routine.
